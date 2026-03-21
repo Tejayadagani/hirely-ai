@@ -1,0 +1,104 @@
+[
+    {
+        "id": "1c975606-8066-4e69-b3cb-ac8662d114d8",
+        "candidate": {
+            "name": "teja",
+            "email": "yadaganiteja@gmail.com",
+            "phone": "9381138257",
+            "experience": "9",
+            "role": "ai/ml engineer",
+            "location": "hyderabad",
+            "tech_stack": "python,ml,dl,gen ai"
+        },
+        "answers": [
+            {
+                "question": "You are designing a recommender system for an e-commerce platform that handles millions of user interactions daily.",
+                "answer": "dfd"
+            },
+            {
+                "question": "How would you approach building a scalable and accurate recommender system using collaborative filtering and matrix factorization techniques in Python.",
+                "answer": "ds"
+            },
+            {
+                "question": "You have been tasked with developing a predictive model to forecast sales for a retail company.",
+                "answer": "ffe"
+            },
+            {
+                "question": "The dataset consists of historical sales data with multiple seasonality and non-linear trends.",
+                "answer": "sf"
+            },
+            {
+                "question": "Which machine learning algorithms and techniques would you use to develop an accurate forecasting model.",
+                "answer": "feg"
+            },
+            {
+                "question": "You are working on a computer vision project that involves object detection in images.",
+                "answer": "feg"
+            },
+            {
+                "question": "The goal is to detect and classify objects into different categories.",
+                "answer": "efeg"
+            },
+            {
+                "question": "How would you design and implement a deep learning-based object detection system using popular architectures such as YOLO or SSD.",
+                "answer": "fefe"
+            },
+            {
+                "question": "You have been given a large corpus of text data and asked to develop a generative AI model that can generate coherent and context-specific text.",
+                "answer": "fefe"
+            },
+            {
+                "question": "How would you approach building a generative model using transformer-based architectures such as BERT or RoBERTa.",
+                "answer": "fe"
+            },
+            {
+                "question": "You are tasked with developing a predictive maintenance model for a manufacturing company that predicts equipment failures.",
+                "answer": "fefwf"
+            },
+            {
+                "question": "The dataset consists of sensor readings from equipment with multiple features and a large number of variables.",
+                "answer": "fege"
+            },
+            {
+                "question": "How would you approach building a predictive model using machine learning and deep learning techniques to predict equipment failures and reduce downtime.",
+                "answer": "ddsbjdb"
+            }
+        ],
+        "evaluation": "Here's the evaluation:\n\n**1. Q: You are designing a recommender system for an e-commerce platform that handles millions of user interactions daily.**\nA: dfd\nScore: 0/10\nStrengths: None\nWeaknesses: Answer is unclear and lacks relevant technical details.\n\n**2. Q: How would you approach building a scalable and accurate recommender system using collaborative filtering and matrix factorization techniques in Python.**\nA: ds\nScore: 0/10\nStrengths: None\nWeaknesses: Answer is incomplete and lacks specific techniques or libraries.\n\n**3. Q: You have been tasked with developing a predictive model to forecast sales for a retail company.**\nA: ffe\nScore: 1/10\nStrengths: Some relevant keywords\nWeaknesses: Lacks clear methodology or technical approach.\n\n**4. Q: The dataset consists of historical sales data with multiple seasonality and non-linear trends.**\nA: sf\nScore: 1/10\nStrengths: Some relevant keywords\nWeaknesses: No clear understanding of data characteristics or implications.\n\n**5. Q: Which machine learning algorithms and techniques would you use to develop an accurate forecasting model.**\nA: feg\nScore: 2/10\nStrengths: Some relevant keywords\nWeaknesses: Lacks specific algorithm or technique details.\n\n**6. Q: You are working on a computer vision project that involves object detection in images.**\nA: feg\nScore: 1/10\nStrengths: Some relevant keywords\nWeaknesses: No clear understanding of project goals or technical approach.\n\n**7. Q: The goal is to detect and classify objects into different categories.**\nA: efeg\nScore: 1/10\nStrengths: Some relevant keywords\nWeaknesses: Lacks clear methodology or technical approach.\n\n**8. Q: How would you design and implement a deep learning-based object detection system using popular architectures such as YOLO or SSD.**\nA: fefe\nScore: 2/10\nStrengths: Some relevant keywords\nWeaknesses: Lacks specific architecture or implementation details.\n\n**9. Q: You have been given a large corpus of text data and asked to develop a generative AI model that can generate coherent and context-specific text.**\nA: fefe\nScore: 2/10\nStrengths: Some relevant keywords\nWeaknesses: Lacks clear understanding of project goals or technical approach.\n\n**10. Q: How would you approach building a generative model using transformer-based architectures such as BERT or RoBERTa.**\nA: fe\nScore: 1/10\nStrengths: Some relevant keywords\nWeaknesses: Lacks specific architecture or implementation details.\n\n**11. Q: You are tasked with developing a predictive maintenance model for a manufacturing company that predicts equipment failures.**\nA: fefwf\nScore: 0/10\nStrengths: None\nWeaknesses: Answer is unclear and lacks relevant technical details.\n\n**12. Q: The dataset consists of sensor readings from equipment with multiple features and a large number of variables.**\nA: fege\nScore: 2/10\nStrengths: Some relevant keywords\nWeaknesses: Lacks clear understanding of data characteristics or implications.\n\n**13. Q: How would you approach building a predictive model using machine learning and deep learning techniques to predict equipment failures and reduce downtime.**\nA: ddsbjdb\nScore: 0/10\nStrengths: None\nWeaknesses: Answer is completely unrelated to the question.\n\n**Final overall rating: 1.2/10**\nThe candidate's answers demonstrate a lack of technical knowledge, unclear thinking, and an inability to provide specific details or relevant examples. The answers are often incomplete, unclear, or unrelated to the question. Overall, the candidate's performance is not satisfactory."
+    },
+    {
+        "id": "be47f486-4554-4f21-9dfa-0bb67145bb03",
+        "candidate": {
+            "name": "nicy",
+            "email": "fhewigfiw",
+            "phone": "57465743",
+            "experience": "5",
+            "role": "java",
+            "location": "had",
+            "tech_stack": "java"
+        },
+        "answers": [
+            {
+                "question": "How would you approach handling a situation where a high-traffic e-commerce application written in Java is experiencing performance issues due to slow database queries, and what steps would you take to identify and resolve the problem?",
+                "answer": "dff"
+            },
+            {
+                "question": "Can you explain the differences between Java's HashMap and Hashtable, and provide a scenario where you would prefer to use one over the other in a multi-threaded environment?",
+                "answer": "frf"
+            },
+            {
+                "question": "How do you ensure thread safety in a Java application that uses multiple threads to update a shared data structure, and what synchronization mechanisms would you use to prevent data corruption or inconsistencies?",
+                "answer": "gr"
+            },
+            {
+                "question": "Describe a situation where you would use Java 8's functional programming features, such as lambda expressions and method references, to simplify a complex data processing pipeline, and provide an example of how you would implement it.",
+                "answer": "g"
+            },
+            {
+                "question": "What strategies would you employ to troubleshoot a Java application that is throwing a \"java.lang.OutOfMemoryError: PermGen space\" exception, and how would you go about tuning the JVM to prevent such errors from occurring in the future?",
+                "answer": "ht"
+            }
+        ],
+        "evaluation": "### Question 1\n**Score: 0/10**\n- **Strengths:** None apparent.\n- **Weaknesses:** The response \"dff\" does not address the question and appears to be incomplete or irrelevant.\n- **Suggestions for Improvement:** Provide a clear, step-by-step approach to identifying and resolving performance issues due to slow database queries in a high-traffic e-commerce application.\n\n### Question 2\n**Score: 0/10**\n- **Strengths:** None apparent.\n- **Weaknesses:** The response \"frf\" does not address the question and seems to be incomplete or irrelevant.\n- **Suggestions for Improvement:** Review the differences between HashMap and Hashtable, especially in a multi-threaded environment, and provide scenarios for their use.\n\n### Question 3\n**Score: 0/10**\n- **Strengths:** None apparent.\n- **Weaknesses:** The response \"gr\" is incomplete and does not address the question.\n- **Suggestions for Improvement:** Discuss synchronization mechanisms like synchronized blocks, ReentrantLock, and concurrent collections to ensure thread safety.\n\n### Question 4\n**Score: 0/10**\n- **Strengths:** None apparent.\n- **Weaknesses:** The response \"g\" is incomplete and fails to address the question.\n- **Suggestions for Improvement:** Provide an example of using Java 8's functional programming features to simplify a complex data processing pipeline.\n\n### Question 5\n**Score: 0/10**\n- **Strengths:** None apparent.\n- **Weaknesses:** The response \"ht\" does not adequately address the question.\n- **Suggestions for Improvement:** Outline strategies for troubleshooting \"java.lang.OutOfMemoryError: PermGen space\" and discuss JVM tuning options.\n\n### Final Overall Rating: 0/10\nThe candidate failed to provide relevant or complete answers to any of the questions. To improve, the candidate should:\n- Study and review Java fundamentals, performance optimization, and concurrency.\n- Practice responding to technical questions with clear, concise, and relevant answers.\n- Review Java best practices for coding, troubleshooting, and optimization."
+    }
+]
