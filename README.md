@@ -220,7 +220,7 @@ http://127.0.0.1:8000
 # 3️⃣ Frontend Setup
 
 ```bash
-cd frontend/vite-project
+cd frontend
 
 npm install
 
@@ -383,10 +383,10 @@ This project provided hands-on experience in:
 # 🌐 Deployment
 
 ## Frontend
-- Vercel
+- Vercel:https://hirely-ai-six.vercel.app/
 
 ## Backend
-- Render
+- Render:https://hirely-ai-backend.onrender.com
 
 ---
 
