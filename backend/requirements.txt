@@ -1,3 +1,13 @@
-streamlit
-python-dotenv
+fastapi
+uvicorn
+python-multipart
+pydantic
+pdfplumber
 groq
+python-dotenv
+aiofiles
+requests
+httpx
+fastapi-mail
+jinja2
+email-validator

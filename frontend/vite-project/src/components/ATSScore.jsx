@@ -25,6 +25,42 @@ function ATSScore({
 
         const fetchATSScore = async () => {
 
+            // -----------------------------------
+            // DEBUG PAYLOAD
+            // -----------------------------------
+            const payload = {
+
+                resume_text:
+
+                    resumeData?.resume_text ||
+
+                    resumeData?.resumeText ||
+
+                    "",
+
+                role:
+
+                    candidateData?.role ||
+
+                    "",
+
+                tech_stack:
+
+                    Array.isArray(
+
+                        candidateData?.tech_stack
+                    )
+
+                    ? candidateData.tech_stack.join(", ")
+
+                    : candidateData?.tech_stack || ""
+            }
+
+            console.log(
+                "ATS PAYLOAD:",
+                payload
+            )
+
             try {
 
                 const response = await fetch(
@@ -40,31 +76,24 @@ function ATSScore({
                             "Content-Type": "application/json"
                         },
 
-                        body: JSON.stringify({
-
-                            resume_text:
-
-                                resumeData?.resumeText ||
-
-                                "",
-
-                            role:
-
-                                candidateData?.role ||
-
-                                "",
-
-                            tech_stack:
-
-                                candidateData?.tech_stack ||
-
-                                ""
-                        })
+                        body: JSON.stringify(
+                            payload
+                        )
                     }
+                )
+
+                console.log(
+                    "ATS STATUS:",
+                    response.status
                 )
 
                 const data =
                     await response.json()
+
+                console.log(
+                    "ATS RESPONSE:",
+                    data
+                )
 
                 // -----------------------------------
                 // LOCAL ATS RESULT
@@ -75,7 +104,7 @@ function ATSScore({
                 )
 
                 // -----------------------------------
-                // SAVE TO HOME STATE
+                // SAVE GLOBAL RESULT
                 // -----------------------------------
                 setGlobalATSResult?.(
 
@@ -84,7 +113,10 @@ function ATSScore({
 
             } catch (error) {
 
-                console.log(error)
+                console.log(
+                    "ATS ERROR:",
+                    error
+                )
 
                 setATSResult(
 
@@ -216,7 +248,17 @@ function ATSScore({
 
                     <strong>Tech Stack:</strong>{" "}
 
-                    {candidateData?.tech_stack}
+                    {
+
+                        Array.isArray(
+                            candidateData?.tech_stack
+                        )
+
+                        ? candidateData.tech_stack.join(", ")
+
+                        : candidateData?.tech_stack
+                    }
+
                 </div>
 
             </div>

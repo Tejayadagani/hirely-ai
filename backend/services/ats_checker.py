@@ -1,7 +1,3 @@
-# -----------------------------------
-# ATS CHECKER USING GROQ AI
-# -----------------------------------
-
 from services.llm_service import (
     get_llm_response
 )
@@ -11,65 +7,62 @@ import json
 import re
 
 
+# -----------------------------------
+# ATS SCORE CALCULATOR
+# -----------------------------------
 def calculate_ats_score(
 
     resume_text,
 
+    role,
+
     tech_stack
 ):
 
-    # -----------------------------------
-    # PROMPT
-    # -----------------------------------
     prompt = f"""
 
-You are an expert ATS (Applicant Tracking System).
+You are an expert ATS evaluator.
 
-Analyze the following resume against the required tech stack.
+Analyze this resume against the job role and tech stack.
 
 Resume:
 {resume_text}
 
-Required Tech Stack:
+Role:
+{role}
+
+Tech Stack:
 {tech_stack}
 
-Your task:
+Provide:
 
-1. Calculate ATS match percentage.
-2. List matching skills.
-3. List missing skills.
-4. Give short professional summary.
+1. ATS match score out of 100
+2. Matching skills
+3. Missing skills
+4. Professional ATS summary
 
 Return ONLY valid JSON.
 
-Example:
+Format:
 
 {{
     "ats_score": 85,
-    "matched_skills": [
-        "Python",
-        "Machine Learning"
-    ],
-    "missing_skills": [
-        "Docker"
-    ],
-    "summary": "Strong profile with good ATS compatibility."
+    "matched_skills": [],
+    "missing_skills": [],
+    "summary": ""
 }}
 
 """
 
-    # -----------------------------------
-    # GET AI RESPONSE
-    # -----------------------------------
     response = get_llm_response(
+
+        "You are an expert ATS evaluator.",
+
         prompt
     )
 
     try:
 
-        # -----------------------------------
-        # CLEAN JSON
-        # -----------------------------------
         clean_response = re.sub(
 
             r"```json|```",
@@ -85,14 +78,18 @@ Example:
 
         return result
 
-    except Exception:
+    except Exception as e:
 
-        # -----------------------------------
-        # FALLBACK
-        # -----------------------------------
+        print(
+
+            "ATS Parsing Error:",
+
+            e
+        )
+
         return {
 
-            "ats_score": 70,
+            "ats_score": 0,
 
             "matched_skills": [],
 
@@ -100,5 +97,5 @@ Example:
 
             "summary":
 
-            "ATS evaluation generated successfully."
+            "ATS evaluation failed."
         }

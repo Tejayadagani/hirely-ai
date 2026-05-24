@@ -69,6 +69,19 @@ function InterviewChat({
     const [loading, setLoading] = useState(false)
 
     // -----------------------------------
+    // SAFE TECH STACK
+    // -----------------------------------
+    const safeTechStack =
+
+        Array.isArray(
+            candidateData?.tech_stack
+        )
+
+        ? candidateData.tech_stack.join(", ")
+
+        : candidateData?.tech_stack || ""
+
+    // -----------------------------------
     // SEND MESSAGE
     // -----------------------------------
     const handleSend = async () => {
@@ -133,7 +146,7 @@ function InterviewChat({
                             answers: updatedAnswers,
 
                             tech_stack:
-                                candidateData.tech_stack
+                                safeTechStack
                         })
                     }
                 )
@@ -243,7 +256,10 @@ function InterviewChat({
                                 candidateData.name,
 
                             candidate_email:
-                                candidateData.email,
+
+                                candidateData.email ||
+
+                                "test@gmail.com",
 
                             role:
                                 candidateData.role,
@@ -292,7 +308,7 @@ function InterviewChat({
                     body: JSON.stringify({
 
                         tech_stack:
-                            candidateData.tech_stack,
+                            safeTechStack,
 
                         experience:
                             candidateData.experience ||

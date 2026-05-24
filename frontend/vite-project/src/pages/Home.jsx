@@ -43,33 +43,34 @@ function Home() {
 
     const [interviewHistory, setInterviewHistory] = useState(() => {
 
-    const savedHistory = localStorage.getItem(
+        const savedHistory = localStorage.getItem(
 
-        "hirely_history"
-    )
-
-    return savedHistory
-
-        ?
-
-        JSON.parse(savedHistory)
-
-        :
-
-        []
-})
-useEffect(() => {
-
-    localStorage.setItem(
-
-        "hirely_history",
-
-        JSON.stringify(
-            interviewHistory
+            "hirely_history"
         )
-    )
 
-}, [interviewHistory])
+        return savedHistory
+
+            ?
+
+            JSON.parse(savedHistory)
+
+            :
+
+            []
+    })
+
+    useEffect(() => {
+
+        localStorage.setItem(
+
+            "hirely_history",
+
+            JSON.stringify(
+                interviewHistory
+            )
+        )
+
+    }, [interviewHistory])
 
     const [selectedInterview, setSelectedInterview] =
         useState(null)
@@ -189,7 +190,14 @@ useEffect(() => {
                             data.role,
 
                         tech_stack:
-                            data.tech_stack,
+
+                            Array.isArray(
+                                data.tech_stack
+                            )
+
+                            ? data.tech_stack.join(", ")
+
+                            : data.tech_stack || "",
 
                         experience:
                             data.experience ||
@@ -197,7 +205,8 @@ useEffect(() => {
                             "Fresher",
 
                         resume_text:
-                            resumeData?.resumeText ||
+
+                            resumeData?.resume_text ||
 
                             ""
                     })

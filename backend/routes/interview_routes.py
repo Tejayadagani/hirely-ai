@@ -10,38 +10,30 @@ from services.llm_service import get_llm_response
 
 router = APIRouter()
 
+
 # -----------------------------------
 # GENERATE FOLLOW-UP QUESTION
 # -----------------------------------
 @router.post("/generate-question")
-
 async def generate_question(data: dict):
 
     tech_stack = data.get(
-
         "tech_stack",
-
         ""
     )
 
     experience = data.get(
-
         "experience",
-
         ""
     )
 
     question = data.get(
-
         "question",
-
         ""
     )
 
     answer = data.get(
-
         "answer",
-
         ""
     )
 
@@ -65,11 +57,8 @@ Candidate Answer:
 Your task:
 - Analyze the candidate's answer carefully.
 - Ask ONE intelligent follow-up technical interview question.
-- The next question MUST relate to the candidate’s previous answer.
-- Keep the interview conversational and adaptive.
-- Avoid generic repeated questions.
-- Ask concise technical questions only.
-- Ask only ONE question.
+- Keep the interview conversational.
+- Avoid repeated generic questions.
 
 """
 
@@ -90,31 +79,25 @@ Your task:
         next_question
     }
 
+
 # -----------------------------------
 # EVALUATE INTERVIEW
 # -----------------------------------
 @router.post("/evaluate-interview")
-
 async def evaluate_interview(data: dict):
 
     questions = data.get(
-
         "questions",
-
         []
     )
 
     answers = data.get(
-
         "answers",
-
         []
     )
 
     tech_stack = data.get(
-
         "tech_stack",
-
         ""
     )
 
@@ -161,7 +144,7 @@ Provide:
 4. Weaknesses
 5. Final Hiring Recommendation
 
-Keep the evaluation concise and professional.
+Keep evaluation concise and professional.
 
 """
 
@@ -182,88 +165,140 @@ Keep the evaluation concise and professional.
         evaluation
     }
 
+
 # -----------------------------------
 # SAVE INTERVIEW
 # -----------------------------------
 @router.post("/save-interview")
-
 async def save_interview(data: dict):
 
-    conn = sqlite3.connect("hirely.db")
+    try:
 
-    cursor = conn.cursor()
-
-    cursor.execute(
-
-        """
-        INSERT INTO interviews (
-
-            candidate_name,
-
-            role,
-
-            ats_score,
-
-            evaluation
-
+        conn = sqlite3.connect(
+            "hirely.db"
         )
 
-        VALUES (?, ?, ?, ?)
-        """,
+        cursor = conn.cursor()
 
-        (
+        cursor.execute(
 
-            data["candidate_name"],
+            """
+            INSERT INTO interviews (
 
-            data["role"],
+                candidate_name,
 
-            data["ats_score"],
+                role,
 
-            data["evaluation"]
+                ats_score,
+
+                evaluation
+
+            )
+
+            VALUES (?, ?, ?, ?)
+            """,
+
+            (
+
+                data.get(
+                    "candidate_name",
+                    ""
+                ),
+
+                data.get(
+                    "role",
+                    ""
+                ),
+
+                data.get(
+                    "ats_score",
+                    ""
+                ),
+
+                data.get(
+                    "evaluation",
+                    ""
+                )
+            )
         )
-    )
 
-    conn.commit()
+        conn.commit()
 
-    conn.close()
+        conn.close()
 
-    # -----------------------------------
-    # SEND EMAIL
-    # -----------------------------------
-    asyncio.create_task(
+        # -----------------------------------
+        # SEND EMAIL
+        # -----------------------------------
+        try:
 
-        send_interview_email(
+            asyncio.create_task(
 
-            data["candidate_email"],
+                send_interview_email(
 
-            data["candidate_name"],
+                    data.get(
+                        "candidate_email",
+                        "test@gmail.com"
+                    ),
 
-            data["role"],
+                    data.get(
+                        "candidate_name",
+                        ""
+                    ),
 
-            data["evaluation"]
+                    data.get(
+                        "role",
+                        ""
+                    ),
+
+                    data.get(
+                        "evaluation",
+                        ""
+                    )
+                )
+            )
+
+        except Exception as email_error:
+
+            print(
+                "Email Error:",
+                email_error
+            )
+
+        return {
+
+            "message":
+
+            "Interview saved successfully"
+        }
+
+    except Exception as e:
+
+        print(
+            "Save Interview Error:",
+            e
         )
-    )
 
-    return {
+        return {
 
-        "message":
+            "message":
 
-        "Interview saved"
-    }
+            f"Failed to save interview: {str(e)}"
+        }
+
 
 # -----------------------------------
 # GET INTERVIEWS
 # -----------------------------------
 @router.get("/get-interviews")
-
 def get_interviews():
 
-    conn = sqlite3.connect("hirely.db")
+    conn = sqlite3.connect(
+        "hirely.db"
+    )
 
     cursor = conn.cursor()
 
     cursor.execute(
-
         "SELECT * FROM interviews"
     )
 
@@ -295,19 +330,20 @@ def get_interviews():
         formatted
     }
 
+
 # -----------------------------------
 # CLEAR INTERVIEWS
 # -----------------------------------
 @router.delete("/clear-interviews")
-
 def clear_interviews():
 
-    conn = sqlite3.connect("hirely.db")
+    conn = sqlite3.connect(
+        "hirely.db"
+    )
 
     cursor = conn.cursor()
 
     cursor.execute(
-
         "DELETE FROM interviews"
     )
 
