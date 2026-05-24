@@ -145,7 +145,7 @@ Email Notification System
 ---
 
 ## AI Integration
-- Gemini API
+- GroqAPI
 - Prompt Engineering
 - AI Evaluation Logic
 
@@ -153,28 +153,40 @@ Email Notification System
 
 # 📸 Screenshots
 
-## 🖥️ Resume Upload
-(Add screenshot here)
+## 🖥️ User Interface
+
+<img width="1402" height="812" alt="UserInterface" src="https://github.com/user-attachments/assets/19f96aed-2497-44f3-8cf1-ccf541ffad6e" />
 
 ---
 
 ## 📊 ATS Evaluation
-(Add screenshot here)
+
+<img width="1414" height="834" alt="ATS evaluation" src="https://github.com/user-attachments/assets/95f8a3bc-9bf6-4f6c-85f4-88a2bc393784" />
 
 ---
 
+##  🧠 AI Interview Mode
+
+<img width="1010" height="453" alt="interview mode" src="https://github.com/user-attachments/assets/358e40fa-09d5-4044-a465-cedb7097987a" />
+
+---
+
+
 ## 💬 AI Chat Interview
-(Add screenshot here)
+
+<img width="1137" height="803" alt="chat interface" src="https://github.com/user-attachments/assets/468ac714-6c29-4132-a4c4-fddfa1a0e7b3" />
 
 ---
 
 ## 🎙️ Audio Interview
-(Add screenshot here)
+
+<img width="996" height="590" alt="Audio Interview" src="https://github.com/user-attachments/assets/99e95b09-f733-4072-be30-70d35146a51e" />
 
 ---
 
 ## 📈 Recruiter Dashboard
-(Add screenshot here)
+
+<img width="1434" height="841" alt="dashboard" src="https://github.com/user-attachments/assets/4e395317-280f-4950-8122-e7fe4d124353" />
 
 ---
 
