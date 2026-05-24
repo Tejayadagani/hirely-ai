@@ -165,7 +165,7 @@ function Home() {
 
             await fetch(
 
-                "http://127.0.0.1:8000/save-candidate",
+                "https://hirely-ai-backend.onrender.com/save-candidate",
 
                 {
 

@@ -65,7 +65,7 @@ function ATSScore({
 
                 const response = await fetch(
 
-                    "http://127.0.0.1:8000/ats-score",
+                    "https://hirely-ai-backend.onrender.com/ats-score",
 
                     {
 

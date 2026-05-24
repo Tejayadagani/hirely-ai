@@ -23,7 +23,7 @@ function Dashboard() {
 
             const response = await fetch(
 
-                "http://127.0.0.1:8000/get-interviews"
+                "https://hirely-ai-backend.onrender.com/get-interviews"
             )
 
             const data =
@@ -67,7 +67,7 @@ function Dashboard() {
 
             await fetch(
 
-                "http://127.0.0.1:8000/clear-interviews",
+                "https://hirely-ai-backend.onrender.com/clear-interviews",
 
                 {
 

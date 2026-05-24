@@ -128,7 +128,7 @@ function InterviewChat({
 
                 const evalResponse = await fetch(
 
-                    "http://127.0.0.1:8000/evaluate-interview",
+                    "https://hirely-ai-backend.onrender.com/evaluate-interview",
 
                     {
 
@@ -239,7 +239,7 @@ function InterviewChat({
                 // -----------------------------------
                 await fetch(
 
-                    "http://127.0.0.1:8000/save-interview",
+                    "https://hirely-ai-backend.onrender.com/save-interview",
 
                     {
 
@@ -294,7 +294,7 @@ function InterviewChat({
             // -----------------------------------
             const response = await fetch(
 
-                "http://127.0.0.1:8000/generate-question",
+                "https://hirely-ai-backend.onrender.com/generate-question",
 
                 {
 
