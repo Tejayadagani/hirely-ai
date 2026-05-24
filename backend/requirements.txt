@@ -11,3 +11,4 @@ httpx
 fastapi-mail
 jinja2
 email-validator
+sqlalchemy
