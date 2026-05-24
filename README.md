@@ -1,243 +1,404 @@
-# 🤖 AI Hiring Agent – TalentScout
+<div align="center">
 
-An intelligent **AI-powered Hiring Assistant** built using **Streamlit** and **Groq LLM APIs** that conducts structured technical interviews, evaluates candidate responses, and maintains interview history.
+# 🚀 Hirely AI
+### Intelligent AI Hiring Assistant Platform
 
----
-
-## 🚀 Project Overview
-
-The **AI Hiring Agent** is designed to simulate a real-world technical interview process.
-Unlike a basic chatbot, this system provides a **guided interview experience**:
-
-* Collects candidate information
-* Generates technical questions based on tech stack
-* Conducts interactive interviews
-* Evaluates responses using AI
-* Stores and manages multiple interview sessions
+<img src="https://img.shields.io/badge/Frontend-React-blue?style=for-the-badge" />
+<img src="https://img.shields.io/badge/Backend-FastAPI-green?style=for-the-badge" />
+<img src="https://img.shields.io/badge/AI-Groq-orange?style=for-the-badge" />
+<img src="https://img.shields.io/badge/Database-SQLite-lightgrey?style=for-the-badge" />
+<img src="https://img.shields.io/badge/Status-Production Ready-success?style=for-the-badge" />
 
 ---
 
-## ✨ Features
+### 💡 AI-Powered Hiring Automation Platform
 
-### 🧑‍💼 Candidate Screening
+Hirely AI is a full-stack AI recruitment platform that automates resume screening, ATS analysis, technical interviewing, recruiter evaluation workflows, and candidate communication using Generative AI.
 
-* Collects:
-
-  * Full Name
-  * Email
-  * Phone Number
-  * Experience
-  * Desired Role
-  * Location
-  * Tech Stack
+</div>
 
 ---
 
-### 🧠 AI Question Generation
+# 📌 Table of Contents
 
-* Powered by **Groq LLM API**
-* Uses **Meta LLaMA 4 Scout (17B Instruct)**
-* Generates **role-based technical questions**
-* Adapts to candidate experience level
-
----
-
-### 💬 Interactive Interview
-
-* Chat-style interface
-* One question at a time
-* Maintains conversation context
-
----
-
-### 📊 AI Evaluation System
-
-* Evaluates each answer individually
-* Provides:
-
-  * Score (out of 10)
-  * Strengths
-  * Weaknesses
-  * Final feedback
-* Structured and readable output
+- Overview
+- Features
+- System Architecture
+- Tech Stack
+- Screenshots
+- Installation
+- Environment Variables
+- Project Workflow
+- Challenges Faced
+- Key Learnings
+- Future Enhancements
+- Deployment
+- Author
 
 ---
 
-### 📂 Interview History
+# 🌟 Overview
 
-* Stores all interviews locally (JSON)
-* Sidebar navigation to view past interviews
-* Supports multiple candidates & roles
+Modern hiring processes are often time-consuming, repetitive, and inconsistent. Hirely AI was developed to solve these challenges by introducing an AI-driven recruitment workflow capable of:
+
+- Screening resumes automatically
+- Evaluating ATS compatibility
+- Conducting intelligent technical interviews
+- Generating adaptive follow-up questions
+- Maintaining recruiter dashboards
+- Sending automated candidate emails
+
+The platform provides a recruiter-like interview experience while reducing manual effort significantly.
 
 ---
 
-### 🔄 Multi-Session Support
+# ✨ Core Features
 
-* Start new interviews anytime
-* Unique interview IDs
-* Persistent data storage
+## 📄 AI Resume Screening
+- Upload candidate resumes
+- Extract technical skills automatically
+- ATS compatibility scoring
+- Resume evaluation summary
+- Recruiter-friendly insights
 
 ---
 
-## 🏗️ Project Structure
+## 🤖 Adaptive AI Technical Interview
 
+### Chat Interview Mode
+- Context-aware technical interviewing
+- Intelligent follow-up questions
+- Dynamic conversation flow
+- AI-generated evaluation reports
+
+### Audio Interview Mode
+- Speech recognition support
+- AI voice questioning
+- One-question-at-a-time interview flow
+- Natural voice interaction
+
+---
+
+## 📊 Recruiter Dashboard
+- View completed interviews
+- Candidate evaluation tracking
+- Interview history persistence
+- Interview management system
+- Clear interview records functionality
+
+---
+
+## 📧 Automated Email System
+- Sends interview completion confirmation emails
+- Professional recruiter communication workflow
+- Integrated SMTP email service
+
+---
+
+# 🧠 AI Capabilities
+
+Hirely AI uses Generative AI to:
+
+- Analyze resumes
+- Evaluate candidate responses
+- Generate technical interview questions
+- Ask contextual follow-up questions
+- Summarize interview performance
+- Simulate recruiter-like interactions
+
+---
+
+# 🏗️ System Architecture
+
+```text
+Frontend (React + Vite)
+        ↓
+FastAPI Backend APIs
+        ↓
+Groq AI Integration
+        ↓
+SQLite Database
+        ↓
+Email Notification System
 ```
-ai_hiring_agent/
-│
-├── app.py                  # Main Streamlit app
-├── config.py               # API configuration
-│
-├── prompts/
-│   ├── question_prompt.py
-│   ├── evaluation_prompt.py
-│
-├── services/
-│   └── llm_service.py      # Groq API integration
-│
-├── utils/
-│   ├── session_manager.py
-│   ├── helpers.py
-│
-├── ui/
-│   ├── styles.py
-│   ├── components.py
-│
-├── data/
-│   └── candidates.json     # Stored interview data
-│
-├── .env
-├── requirements.txt
-└── README.md
-```
 
 ---
 
-## ⚙️ Installation
+# 🛠️ Tech Stack
 
-### 1. Clone the repository
+## Frontend
+- React.js
+- Vite
+- Tailwind CSS
+- JavaScript
+- Speech Recognition API
+- Speech Synthesis API
+
+---
+
+## Backend
+- FastAPI
+- Python
+- SQLite
+- FastAPI-Mail
+
+---
+
+## AI Integration
+- Gemini API
+- Prompt Engineering
+- AI Evaluation Logic
+
+---
+
+# 📸 Screenshots
+
+## 🖥️ Resume Upload
+(Add screenshot here)
+
+---
+
+## 📊 ATS Evaluation
+(Add screenshot here)
+
+---
+
+## 💬 AI Chat Interview
+(Add screenshot here)
+
+---
+
+## 🎙️ Audio Interview
+(Add screenshot here)
+
+---
+
+## 📈 Recruiter Dashboard
+(Add screenshot here)
+
+---
+
+# ⚙️ Installation Guide
+
+# 1️⃣ Clone Repository
 
 ```bash
-git clone <your-repo-link>
-cd ai_hiring_agent
+git clone https://github.com/Tejayadagani/hirely-ai.git
 ```
 
 ---
 
-### 2. Create virtual environment
+# 2️⃣ Backend Setup
 
 ```bash
-python -m venv .venv
-source .venv/bin/activate   # Mac/Linux
-.venv\Scripts\activate      # Windows
-```
+cd backend
 
----
-
-### 3. Install dependencies
-
-```bash
 pip install -r requirements.txt
+
+uvicorn main:app --reload
+```
+
+Backend runs on:
+```text
+http://127.0.0.1:8000
 ```
 
 ---
 
-## 🔐 Environment Setup
-
-Create a `.env` file:
-
-```
-GROQ_API_KEY=your_groq_api_key_here
-```
-
-👉 Get API key from: https://console.groq.com/
-
----
-
-## ▶️ Run the Application
+# 3️⃣ Frontend Setup
 
 ```bash
-streamlit run app.py
+cd frontend/vite-project
+
+npm install
+
+npm run dev
+```
+
+Frontend runs on:
+```text
+http://127.0.0.1:5173
 ```
 
 ---
 
-## 🧠 Technologies Used
+# 🔑 Environment Variables
 
-* **Frontend:** Streamlit
-* **Backend:** Python
-* **LLM API:** Groq
-* **Model:** Meta LLaMA 4 Scout (17B Instruct)
-* **Data Storage:** JSON
-* **State Management:** Streamlit Session State
+Create `.env` file:
 
----
+```env
+MAIL_USERNAME=
 
-## 🧩 Prompt Engineering
+MAIL_PASSWORD=
 
-The system uses **role-based prompting**:
+MAIL_FROM=
 
-### Question Generation
+MAIL_PORT=
 
-* AI acts as a **Senior Technical Interviewer**
-* Generates relevant, real-world questions
+MAIL_SERVER=
 
-### Answer Evaluation
-
-* Provides:
-
-  * Score (out of 10)
-  * Strengths
-  * Weaknesses
-  * Final feedback
+GEMINI_API_KEY=
+```
 
 ---
 
-## 🔒 Data Handling & Privacy
+# 🔄 Project Workflow
 
-* Data stored locally in JSON format
-* No external database used
-* No sensitive data sharing
-* Suitable for demo/testing environments
-
----
-
-## ⚠️ Challenges & Solutions
-
-| Challenge                    | Solution                  |
-| ---------------------------- | ------------------------- |
-| LLM output formatting issues | Strict prompt engineering |
-| JSON decode errors           | Added error handling      |
-| Multi-session handling       | Unique interview IDs      |
-| Context management           | Session state tracking    |
-
----
-
-## 🎯 Future Enhancements
-
-* 📊 Candidate performance dashboard
-* 📄 PDF report generation
-* 🌐 Cloud deployment (Streamlit Cloud / AWS)
-* 🔍 Search & filter interview history
-* 🎙️ Voice-based interviews
+```text
+Resume Upload
+      ↓
+ATS Analysis
+      ↓
+AI Technical Interview
+      ↓
+Dynamic Follow-Up Questions
+      ↓
+Interview Evaluation
+      ↓
+Database Storage
+      ↓
+Recruiter Dashboard
+      ↓
+Candidate Email Notification
+```
 
 ---
 
-## 📌 Evaluation Criteria Alignment
+# 🚧 Challenges Faced During Development
 
-✔ Technical implementation of AI hiring flow
-✔ Strong prompt engineering
-✔ Clean UI/UX with Streamlit
-✔ Context-aware interactions
-✔ Modular and maintainable code
+## 🔹 AI Follow-Up Question Logic
+One major challenge was ensuring the AI interviewer generated contextual follow-up questions instead of generic repeated questions.
 
----
-
-## 👨‍💻 Author
-
-**Dharma Teja Yadagani**
+### Solution:
+Implemented prompt engineering strategies using:
+- Previous question context
+- Candidate answer analysis
+- Tech stack awareness
+- Conversational memory flow
 
 ---
 
-## 📄 License
+## 🔹 Audio Interview Synchronization
+Speech synthesis and speech recognition overlapped during audio interviews.
 
-This project is for educational and assignment purposes.
+### Solution:
+Implemented:
+- One-question-at-a-time flow
+- Speech cancellation handling
+- Listening state management
+- Sequential AI interaction logic
+
+---
+
+## 🔹 Local Storage Persistence
+Interview history was lost after browser refresh.
+
+### Solution:
+Integrated:
+- localStorage persistence
+- Session restoration logic
+- Dynamic state hydration
+
+---
+
+## 🔹 Email Authentication Errors
+SMTP login failures occurred due to Gmail security restrictions.
+
+### Solution:
+Configured:
+- Google App Passwords
+- Secure SMTP authentication
+- Environment variable protection
+
+---
+
+# 📚 Key Learnings
+
+This project provided hands-on experience in:
+
+- Full Stack Development
+- REST API Design
+- AI Prompt Engineering
+- FastAPI Backend Architecture
+- State Management
+- Voice AI Integration
+- Async Programming
+- Deployment Preparation
+- Database Operations
+- Real-world Debugging
+
+---
+
+# 🚀 Future Enhancements
+
+## 🔐 Authentication System
+- JWT authentication
+- Recruiter login/signup
+- Candidate authentication
+
+---
+
+## 📹 Live Video Interview
+- AI-powered video interviews
+- Real-time proctoring
+- Webcam monitoring
+
+---
+
+## ☁️ Cloud Database
+- PostgreSQL integration
+- Scalable production database
+- Cloud persistence
+
+---
+
+## 📈 Analytics Dashboard
+- Candidate analytics
+- Interview trends
+- Recruiter insights
+- AI performance metrics
+
+---
+
+## 🤖 Advanced AI Features
+- Emotion detection
+- Behavioral analysis
+- AI cheating detection
+- Resume-job matching engine
+
+---
+
+# 🌐 Deployment
+
+## Frontend
+- Vercel
+
+## Backend
+- Render
+
+---
+
+# 👨‍💻 Author
+
+## Dharma Teja Yadagani
+
+Passionate Full Stack & AI Developer focused on building intelligent real-world applications using modern web technologies and Generative AI.
+
+---
+
+# ⭐ Support
+
+If you found this project useful:
+
+- ⭐ Star this repository
+- 🍴 Fork the project
+- 🚀 Share with others
+
+---
+
+<div align="center">
+
+# 🚀 Hirely AI
+### Built with ❤️ using AI + Full Stack Engineering
+
+</div>
