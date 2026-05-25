@@ -196,6 +196,15 @@ function AudioInterview({
                             answers: updatedAnswers,
 
                             tech_stack:
+
+                                Array.isArray(candidateData.tech_stack)
+
+                                ?
+
+                                candidateData.tech_stack.join(", ")
+
+                                :
+
                                 candidateData.tech_stack
                         })
                     }
@@ -278,6 +287,15 @@ function AudioInterview({
                     body: JSON.stringify({
 
                         tech_stack:
+
+                            Array.isArray(candidateData.tech_stack)
+
+                            ?
+
+                            candidateData.tech_stack.join(", ")
+
+                            :
+
                             candidateData.tech_stack,
 
                         experience:
